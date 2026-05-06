@@ -1,0 +1,2 @@
+MED1|Popescu|Ion|6b:62:6a:6a:6b:6a:6b:6a:6a:6a:6a:6a:6a:|M|01.01.1980|0700000000|ion@spital.ro|Bucuresti|MED1|2010-05-10|12000.000000|1|||Cardiologie|PRIMAR|P123|Luni-Vineri 08:00-16:00|5.000000|0|0|
+MED2|Ionescu|Maria|68:62:6f:6a:6b:6a:6b:6a:6a:6a:6a:6a:6a:|F|01.01.1985|0700000001|maria@spital.ro|Bucuresti|MED2|2015-02-01|10000.000000|1|||Chirurgie|SPECIALIST|P456|Luni-Vineri 08:00-16:00|5.000000|0|0|

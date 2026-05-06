@@ -1,0 +1,4 @@
+admin|001ae6d5c6fd8e0b|ADMIN||1|0
+dr.popescu|001ae74cbdf64cb2|MEDIC|MED1|1|0
+asist.ion|001ae6d94cf0e210|ASISTENT|ASI1|1|0
+receptie|c0ca9dad32060a43|RECEPTIE||1|0

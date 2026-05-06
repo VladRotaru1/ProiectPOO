@@ -1,0 +1,2 @@
+MEDICAMENT|PRD1|Paracetamol|100|15.500000|2028-12-31|Paracetamol 500mg|comprimate|0||
+CONSUMABIL|PRD2|Seringi 5ml|500|0.500000|2030-01-01|Materiale|bucati

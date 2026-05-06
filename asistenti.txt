@@ -1,0 +1,2 @@
+ASI1|Vasile|Elena|68:63:6a:6a:6b:6a:6b:6a:6a:6a:6a:6a:6a:|F|01.01.1990|0700000002|elena@spital.ro|Bucuresti|ASI1|2018-03-15|5000.000000|1|||Cardiologie|rotatie||
+ASI1|Vasile|Elena|68:63:6a:6a:6b:6a:6b:6a:6a:6a:6a:6a:6a:|F|01.01.1990|0700000002|elena@spital.ro|Bucuresti|ASI1|2018-03-15|5000.000000|1|||Cardiologie|rotatie||

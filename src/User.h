@@ -51,6 +51,7 @@ public:
     // Autentificare
     bool verificaParola(const std::string& parola) const;
     void schimbaParola(const std::string& parolaVeche, const std::string& parolaNoua);
+    void forceSetParola(const std::string& parolaNoua);
     void incrementeazaTentative() { tentativeEsuate++; }
     void reseteazaTentative()     { tentativeEsuate = 0; }
     bool esteBlockat()            const { return tentativeEsuate >= 3; }

@@ -51,4 +51,5 @@ public:
     void creeazaUtilizatoriDefault();
 
     int getNumarUtilizatori() const { return (int)utilizatori.size(); }
+    const std::vector<User>& getUtilizatori() const { return utilizatori; }
 };

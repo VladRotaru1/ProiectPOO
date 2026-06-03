@@ -5,6 +5,103 @@
 #include "Exceptii.h"
 #include <iostream>
 #include <string>
+#include <cstdlib>
+
+// ============================================================
+//  Include-uri TUI — incluse doar daca USE_TUI este definit
+//  (setat in CMakeLists.txt cu option(USE_TUI "Enable Notcurses TUI" ON))
+// ============================================================
+#ifdef USE_TUI
+#include "TuiLogin.h"
+#include "TuiDashboard.h"
+#include <ncurses.h>
+#endif
+
+// ============================================================
+//  MenuManager::startTUI()
+//  Punctul de intrare in interfata TUI.
+//  Initializeaza ncurses, ruleaza Login, apoi Dashboard-ul
+//  corespunzator rolului autentificat. La Logout, revine la Login.
+// ============================================================
+void MenuManager::startTUI() {
+#ifdef USE_TUI
+    auto hm   = HospitalManager::getInstance();
+    auto auth = hm->getAuthService();
+
+    // Genereaza date demo daca e primul start
+    hm->genereazaDateDemo();
+
+    // Initializeaza ncurses
+    initscr();
+    cbreak();
+    noecho();
+    keypad(stdscr, TRUE);
+    curs_set(0); // Ascunde cursorul implicit
+
+    if (has_colors()) {
+        start_color();
+        // Setari perechi de culori de baza (Foreground, Background)
+        init_pair(1, COLOR_CYAN, COLOR_BLACK);   // Titluri
+        init_pair(2, COLOR_WHITE, COLOR_BLACK);  // Text normal
+        init_pair(3, COLOR_RED, COLOR_BLACK);    // Erori
+        init_pair(4, COLOR_BLACK, COLOR_CYAN);   // Selectat/Focus
+        init_pair(5, COLOR_GREEN, COLOR_BLACK);  // Succes
+        init_pair(6, COLOR_YELLOW, COLOR_BLACK); // Avertismente
+    }
+
+    // ============================================================
+    //  Bucla principala: Login → Dashboard → (Logout → Login)
+    // ============================================================
+    bool exitApp = false;
+    while (!exitApp) {
+        // ---- Ecran de Login ----
+        {
+            TuiLoginScreen loginScreen(auth);
+            LoginResult lr = loginScreen.run();
+
+            if (lr.exitApp) {
+                exitApp = true;
+                break;
+            }
+            // Daca login a esuat, reincearca
+            if (!lr.success || !auth->esteAutentificat()) {
+                continue;
+            }
+        }
+
+        // ---- Dashboard dupa autentificare ----
+        {
+            Rol rol = auth->getUtilizatorCurent()->getRol();
+            try {
+                switch (rol) {
+                    case Rol::ADMIN:
+                    case Rol::MEDIC:
+                    case Rol::ASISTENT:
+                    case Rol::RECEPTIE: {
+                        TuiAdminDashboard dash(hm, auth.get());
+                        dash.run();
+                        break;
+                    }
+                }
+            } catch (const std::exception& e) {
+                clear();
+                mvprintw(LINES / 2, (COLS - 20) / 2, "Eroare: %s", e.what());
+                refresh();
+                napms(2000);
+            }
+        }
+    }
+
+    // Curatare ncurses
+    endwin();
+
+#else
+    // Fallback: USE_TUI nu e definit — ruleaza CLI
+    std::cout << "[INFO] TUI nu este compilat. Rulati cu -DUSE_TUI=ON.\n"
+              << "       Pornind interfata CLI...\n\n";
+    start();
+#endif
+}
 
 void MenuManager::start() {
     auto hospital = HospitalManager::getInstance();

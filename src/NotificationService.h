@@ -24,6 +24,9 @@ private:
 public:
     explicit ConsoleObserver(const std::string& n) : nume(n) {}
     void onNotificare(const std::string& tip, const std::string& mesaj) override {
+        if (tip == "STOC_CRITIC" || tip == "PRODUS_EXPIRAT") {
+            return; // Nu afisam in consola, se vor vedea in interfata
+        }
         std::cout << "\n  *** ALERTA [" << tip << "] -> " << mesaj << " ***\n";
     }
 };

@@ -63,6 +63,12 @@ void User::schimbaParola(const std::string& parolaVeche, const std::string& paro
     parolaHash = hashParola(parolaNoua);
 }
 
+void User::forceSetParola(const std::string& parolaNoua) {
+    if (parolaNoua.size() < 4)
+        throw AutentificareException("Parola noua prea scurta (minim 4 caractere)");
+    parolaHash = hashParola(parolaNoua);
+}
+
 void User::afisare() const {
     std::cout << "[USER] " << username
               << " | Rol: " << rolToString(rol)

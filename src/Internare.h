@@ -63,6 +63,7 @@ public:
     std::string    getDiagnosticExternare()  const { return diagnosticExternare; }
     double         getCostTotal()            const { return costTotal; }
     bool           isActiva()               const { return stare == StareInternare::ACTIVA; }
+    const std::vector<std::pair<std::string, std::string>>& getParametriVitali() const { return parametriVitali; }
 
     // Setters
     void setTratamentActiv(const std::string& t)  { tratamentActiv = t; }

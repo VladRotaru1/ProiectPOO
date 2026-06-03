@@ -38,9 +38,25 @@ set(SOURCES_LIB
     src/MenuManager.cpp
 )
 
+option(USE_TUI "Enable Notcurses TUI" ON)
+
+if(USE_TUI)
+    find_package(Curses REQUIRED)
+    add_compile_definitions(USE_TUI)
+    list(APPEND SOURCES_LIB src/TuiLogin.cpp src/TuiDashboard.cpp)
+endif()
+
 add_executable(SpitalHIS src/main.cpp ${SOURCES_LIB})
 target_include_directories(SpitalHIS PRIVATE src)
 
 # Test executable
 add_executable(Tests tests/test_main.cpp ${SOURCES_LIB})
 target_include_directories(Tests PRIVATE src)
+
+if(USE_TUI)
+    target_link_libraries(SpitalHIS PRIVATE ${CURSES_LIBRARIES})
+    target_include_directories(SpitalHIS PRIVATE ${CURSES_INCLUDE_DIRS})
+    target_link_libraries(Tests PRIVATE ${CURSES_LIBRARIES})
+    target_include_directories(Tests PRIVATE ${CURSES_INCLUDE_DIRS})
+endif()
+

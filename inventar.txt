@@ -1,2 +1,22 @@
-MEDICAMENT|PRD1|Paracetamol|100|15.500000|2028-12-31|Paracetamol 500mg|comprimate|0||
-CONSUMABIL|PRD2|Seringi 5ml|500|0.500000|2030-01-01|Materiale|bucati
+CONSUMABIL|PROD_4000|Manusi Chirurgicale|5|15.500000|2023-01-01|Diverse|Bucati
+CONSUMABIL|PROD_4001|Seringi 10ml|500|15.500000|2028-01-01|Diverse|Bucati
+CONSUMABIL|PROD_4002|Fese tifon|500|15.500000|2028-01-01|Diverse|Bucati
+MEDICAMENT|PROD_4003|Paracetamol comprimate|500|15.500000|2028-01-01|Substanta|Comprimate|0|Producator X|
+MEDICAMENT|PROD_4004|Amoxicilina capsule|500|15.500000|2028-01-01|Substanta|Comprimate|0|Producator X|
+MEDICAMENT|PROD_4005|Ser Fiziologic 500ml|5|15.500000|2028-01-01|Substanta|Comprimate|0|Producator X|
+CONSUMABIL|PROD_4006|Eprubete recoltare|500|15.500000|2023-01-01|Diverse|Bucati
+ECHIPAMENT|PROD_4007|Masca oxigen|500|1500.000000|2028-01-01|Medical|Nou
+CONSUMABIL|PROD_4008|Betadina flacon|500|15.500000|2028-01-01|Diverse|Bucati
+CONSUMABIL|PROD_4009|Plasturi sterili|500|15.500000|2028-01-01|Diverse|Bucati
+MEDICAMENT|PROD_4010|Ibuprofen 400mg|5|15.500000|2028-01-01|Substanta|Comprimate|0|Producator X|
+MEDICAMENT|PROD_4011|Lidocaina spray|500|15.500000|2028-01-01|Substanta|Comprimate|0|Producator X|
+CONSUMABIL|PROD_4012|Cateter IV|500|15.500000|2023-01-01|Diverse|Bucati
+CONSUMABIL|PROD_4013|Perfuzoare|500|15.500000|2028-01-01|Diverse|Bucati
+MEDICAMENT|PROD_4014|Aspirina Cardio|500|15.500000|2028-01-01|Substanta|Comprimate|0|Producator X|
+MEDICAMENT|PROD_4015|Metoprolol 50mg|5|15.500000|2028-01-01|Substanta|Comprimate|0|Producator X|
+CONSUMABIL|PROD_4016|Sonde Foley|500|15.500000|2028-01-01|Diverse|Bucati
+CONSUMABIL|PROD_4017|Gel EKG|500|15.500000|2028-01-01|Diverse|Bucati
+MEDICAMENT|PROD_4018|Diazepam fiole|500|15.500000|2023-01-01|Substanta|Comprimate|0|Producator X|
+MEDICAMENT|PROD_4019|Adrenalina fiole|500|15.500000|2028-01-01|Substanta|Comprimate|0|Producator X|
+ECHIPAMENT|PROD_4020|Aparat TA|5|1500.000000|2028-01-01|Medical|Nou
+ECHIPAMENT|PROD_4021|Termometru IR|500|1500.000000|2028-01-01|Medical|Nou

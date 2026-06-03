@@ -94,7 +94,13 @@ public:
     void calculSalariiTotale() const;
 
     const std::vector<std::shared_ptr<Pacient>>& getPacienti() const { return pacienti; }
+    const std::vector<std::shared_ptr<Medic>>& getMedici() const { return medici; }
+    const std::vector<std::shared_ptr<Asistent>>& getAsistenti() const { return asistenti; }
+    const std::vector<std::shared_ptr<PersonalAuxiliar>>& getPersonalAux() const { return personalAux; }
     const std::vector<std::shared_ptr<Programare>>& getProgramari() const { return programari; }
+    const std::vector<std::shared_ptr<Internare>>& getInternari() const { return internari; }
+    const std::vector<std::shared_ptr<Sectie>>& getSectii() const { return sectii; }
+    const std::vector<std::shared_ptr<AparaturaMedicala>>& getAparatura() const { return aparatura; }
 
     // ==========================================
     // SECTII, SALOANE, PATURI

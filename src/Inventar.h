@@ -27,7 +27,20 @@ public:
     // Adauga produs
     void adaugaProdus(std::shared_ptr<T> produs) {
         produse.push_back(produs);
-        verificaAlerte();
+        if (produs->stocCritic(pragStocCritic)) {
+            NotificationService::getInstance()->notifica(
+                "STOC_CRITIC",
+                "Stoc critic: " + produs->getDenumire() +
+                " (" + std::to_string(produs->getCantitate()) + " unitati)"
+            );
+        }
+        if (produs->esteExpirat()) {
+            NotificationService::getInstance()->notifica(
+                "PRODUS_EXPIRAT",
+                "Produs expirat: " + produs->getDenumire() +
+                " (exp: " + produs->getTermenExpirare() + ")"
+            );
+        }
     }
 
     // Elimina produs dupa id

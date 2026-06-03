@@ -1,0 +1,25 @@
+CONS_3000|PRG_2000|PAC_1000|MED_1000|2026-10-01||Hipertensiune Arteriala (I10)||Repaus si tratament medicamentos|0|
+CONS_3001|PRG_2001|PAC_1001|MED_1001|2026-10-01||Diabet Zaharat tip 2 (E11)||Repaus si tratament medicamentos|0|
+CONS_3002|PRG_2002|PAC_1002|MED_1002|2026-10-01||Apendicita acuta (K35)||Repaus si tratament medicamentos|0|
+CONS_3003|PRG_2003|PAC_1003|MED_1003|2026-10-01||Pneumonie (J18)||Repaus si tratament medicamentos|0|
+CONS_3004|PRG_2004|PAC_1004|MED_1004|2026-10-01||Fractura clavicula (S42.0)||Repaus si tratament medicamentos|0|
+CONS_3005|PRG_2005|PAC_1005|MED_1005|2026-10-01||Infarct miocardic acut (I21)||Repaus si tratament medicamentos|0|
+CONS_3006|PRG_2006|PAC_1006|MED_1006|2026-10-01||Hipertensiune Arteriala (I10)||Repaus si tratament medicamentos|0|
+CONS_3007|PRG_2007|PAC_1007|MED_1007|2026-10-01||Diabet Zaharat tip 2 (E11)||Repaus si tratament medicamentos|0|
+CONS_3008|PRG_2008|PAC_1008|MED_1008|2026-10-01||Apendicita acuta (K35)||Repaus si tratament medicamentos|0|
+CONS_3009|PRG_2009|PAC_1009|MED_1009|2026-10-01||Pneumonie (J18)||Repaus si tratament medicamentos|0|
+CONS_3010|PRG_2010|PAC_1010|MED_1010|2026-10-01||Fractura clavicula (S42.0)||Repaus si tratament medicamentos|0|
+CONS_3011|PRG_2011|PAC_1011|MED_1011|2026-10-01||Infarct miocardic acut (I21)||Repaus si tratament medicamentos|0|
+CONS_3012|PRG_2012|PAC_1012|MED_1012|2026-10-01||Hipertensiune Arteriala (I10)||Repaus si tratament medicamentos|0|
+CONS_3013|PRG_2013|PAC_1013|MED_1013|2026-10-01||Diabet Zaharat tip 2 (E11)||Repaus si tratament medicamentos|0|
+CONS_3014|PRG_2014|PAC_1014|MED_1014|2026-10-01||Apendicita acuta (K35)||Repaus si tratament medicamentos|0|
+CONS_3015|PRG_2015|PAC_1015|MED_1015|2026-10-01||Pneumonie (J18)||Repaus si tratament medicamentos|0|
+CONS_3016|PRG_2016|PAC_1016|MED_1016|2026-10-01||Fractura clavicula (S42.0)||Repaus si tratament medicamentos|0|
+CONS_3017|PRG_2017|PAC_1017|MED_1017|2026-10-01||Infarct miocardic acut (I21)||Repaus si tratament medicamentos|0|
+CONS_3018|PRG_2018|PAC_1018|MED_1018|2026-10-01||Hipertensiune Arteriala (I10)||Repaus si tratament medicamentos|0|
+CONS_3019|PRG_2019|PAC_1019|MED_1019|2026-10-01||Diabet Zaharat tip 2 (E11)||Repaus si tratament medicamentos|0|
+CONS_3020|PRG_2020|PAC_1020|MED_1020|2026-10-01||Apendicita acuta (K35)||Repaus si tratament medicamentos|0|
+CONS_3021|PRG_2021|PAC_1021|MED_1021|2026-10-01||Pneumonie (J18)||Repaus si tratament medicamentos|0|
+CONS_3022|PRG_2022|PAC_1022|MED_1000|2026-10-01||Fractura clavicula (S42.0)||Repaus si tratament medicamentos|0|
+CONS_3023|PRG_2023|PAC_1023|MED_1001|2026-10-01||Infarct miocardic acut (I21)||Repaus si tratament medicamentos|0|
+CONS_3024|PRG_2024|PAC_1024|MED_1002|2026-10-01||Hipertensiune Arteriala (I10)||Repaus si tratament medicamentos|0|

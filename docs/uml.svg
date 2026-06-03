@@ -1,0 +1,144 @@
+<svg width="100%" viewBox="0 0 680 920" xmlns="http://www.w3.org/2000/svg" style="background:#ffffff; font-family: sans-serif;">
+  <title>Diagrama UML — ierarhia claselor SpitalHIS</title>
+  <desc>Diagrama UML cu clasele sistemului SpitalHIS</desc>
+
+  <defs>
+    <marker id="inherit" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <polygon points="1,1 11,6 1,11" fill="none" stroke="#555" stroke-width="1.2"/>
+    </marker>
+    <marker id="assoc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- ===== ROW 0: Persoana ===== -->
+  <rect x="250" y="20" width="180" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text x="340" y="44" text-anchor="middle" font-size="14" font-weight="600" fill="#3C3489">Persoana</text>
+  <text x="340" y="62" text-anchor="middle" font-size="11" fill="#534AB7">clasă de bază abstractă</text>
+
+  <!-- inherit Persoana -> Pacient -->
+  <line x1="290" y1="76" x2="200" y2="150" stroke="#555" stroke-width="1" marker-end="url(#inherit)"/>
+  <!-- inherit Persoana -> Angajat -->
+  <line x1="390" y1="76" x2="470" y2="150" stroke="#555" stroke-width="1" marker-end="url(#inherit)"/>
+
+  <!-- ===== ROW 1: Pacient | Angajat ===== -->
+  <rect x="100" y="150" width="160" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1"/>
+  <text x="180" y="174" text-anchor="middle" font-size="14" font-weight="600" fill="#085041">Pacient</text>
+  <text x="180" y="192" text-anchor="middle" font-size="11" fill="#0F6E56">date medicale</text>
+
+  <rect x="400" y="150" width="160" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+  <text x="480" y="174" text-anchor="middle" font-size="14" font-weight="600" fill="#0C447C">Angajat</text>
+  <text x="480" y="192" text-anchor="middle" font-size="11" fill="#185FA5">date angajare</text>
+
+  <!-- inherit Angajat -> Medic -->
+  <line x1="440" y1="206" x2="170" y2="280" stroke="#555" stroke-width="1" marker-end="url(#inherit)"/>
+  <!-- inherit Angajat -> Asistent -->
+  <line x1="480" y1="206" x2="420" y2="280" stroke="#555" stroke-width="1" marker-end="url(#inherit)"/>
+  <!-- inherit Angajat -> PersonalAuxiliar -->
+  <line x1="520" y1="206" x2="590" y2="280" stroke="#555" stroke-width="1" marker-end="url(#inherit)"/>
+
+  <!-- ===== ROW 2: Medic | Asistent | PersonalAuxiliar ===== -->
+  <rect x="80" y="280" width="160" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+  <text x="160" y="304" text-anchor="middle" font-size="14" font-weight="600" fill="#0C447C">Medic</text>
+  <text x="160" y="322" text-anchor="middle" font-size="11" fill="#185FA5">specialitate, salon</text>
+
+  <rect x="340" y="280" width="160" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+  <text x="420" y="304" text-anchor="middle" font-size="14" font-weight="600" fill="#0C447C">Asistent</text>
+  <text x="420" y="322" text-anchor="middle" font-size="11" fill="#185FA5">ture, secție</text>
+
+  <rect x="510" y="280" width="160" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+  <text x="590" y="304" text-anchor="middle" font-size="14" font-weight="600" fill="#0C447C">PersonalAuxiliar</text>
+  <text x="590" y="322" text-anchor="middle" font-size="11" fill="#185FA5">rol auxiliar</text>
+
+  <!-- separator -->
+  <line x1="40" y1="380" x2="640" y2="380" stroke="#aaa" stroke-width="0.5" stroke-dasharray="4 4"/>
+  <text x="340" y="374" text-anchor="middle" font-size="11" fill="#888">entități clinice</text>
+
+  <!-- ===== ROW 3: Pat | Salon | Sectie ===== -->
+  <rect x="50" y="395" width="130" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1"/>
+  <text x="115" y="419" text-anchor="middle" font-size="14" font-weight="600" fill="#085041">Pat</text>
+  <text x="115" y="437" text-anchor="middle" font-size="11" fill="#0F6E56">salon, disponibil</text>
+
+  <rect x="205" y="395" width="130" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1"/>
+  <text x="270" y="419" text-anchor="middle" font-size="14" font-weight="600" fill="#085041">Salon</text>
+  <text x="270" y="437" text-anchor="middle" font-size="11" fill="#0F6E56">paturi, secție</text>
+
+  <rect x="360" y="395" width="130" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1"/>
+  <text x="425" y="419" text-anchor="middle" font-size="14" font-weight="600" fill="#085041">Sectie</text>
+  <text x="425" y="437" text-anchor="middle" font-size="11" fill="#0F6E56">saloane, medici</text>
+
+  <!-- ===== ROW 4: Internare | Programare | Consultatie | Reteta ===== -->
+  <rect x="50" y="495" width="130" height="56" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
+  <text x="115" y="519" text-anchor="middle" font-size="14" font-weight="600" fill="#633806">Internare</text>
+  <text x="115" y="537" text-anchor="middle" font-size="11" fill="#854F0B">pacient, pat, dată</text>
+
+  <rect x="205" y="495" width="130" height="56" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
+  <text x="270" y="519" text-anchor="middle" font-size="14" font-weight="600" fill="#633806">Programare</text>
+  <text x="270" y="537" text-anchor="middle" font-size="11" fill="#854F0B">pacient, medic</text>
+
+  <rect x="360" y="495" width="130" height="56" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
+  <text x="425" y="519" text-anchor="middle" font-size="14" font-weight="600" fill="#633806">Consultatie</text>
+  <text x="425" y="537" text-anchor="middle" font-size="11" fill="#854F0B">diagnostic, tratament</text>
+
+  <rect x="510" y="495" width="130" height="56" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
+  <text x="575" y="519" text-anchor="middle" font-size="14" font-weight="600" fill="#633806">Reteta</text>
+  <text x="575" y="537" text-anchor="middle" font-size="11" fill="#854F0B">medicamente</text>
+
+  <!-- ===== ROW 5: AnalizaLaborator | AparaturaMedicala | Produs ===== -->
+  <rect x="50" y="600" width="160" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text x="130" y="624" text-anchor="middle" font-size="14" font-weight="600" fill="#712B13">AnalizaLaborator</text>
+  <text x="130" y="642" text-anchor="middle" font-size="11" fill="#993C1D">rezultate, tip</text>
+
+  <rect x="240" y="600" width="170" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text x="325" y="624" text-anchor="middle" font-size="14" font-weight="600" fill="#712B13">AparaturaMedicala</text>
+  <text x="325" y="642" text-anchor="middle" font-size="11" fill="#993C1D">inventar, stare</text>
+
+  <rect x="440" y="600" width="130" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text x="505" y="624" text-anchor="middle" font-size="14" font-weight="600" fill="#712B13">Produs</text>
+  <text x="505" y="642" text-anchor="middle" font-size="11" fill="#993C1D">stoc, preț</text>
+
+  <!-- separator -->
+  <line x1="40" y1="700" x2="640" y2="700" stroke="#aaa" stroke-width="0.5" stroke-dasharray="4 4"/>
+  <text x="340" y="694" text-anchor="middle" font-size="11" fill="#888">servicii și management</text>
+
+  <!-- ===== ROW 6: HospitalManager | FinanciarManager | AuthService | NotificationService ===== -->
+  <rect x="30" y="715" width="140" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1"/>
+  <text x="100" y="739" text-anchor="middle" font-size="13" font-weight="600" fill="#444441">HospitalManager</text>
+  <text x="100" y="757" text-anchor="middle" font-size="11" fill="#5F5E5A">CRUD principal</text>
+
+  <rect x="190" y="715" width="140" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1"/>
+  <text x="260" y="739" text-anchor="middle" font-size="13" font-weight="600" fill="#444441">FinanciarManager</text>
+  <text x="260" y="757" text-anchor="middle" font-size="11" fill="#5F5E5A">facturi, plăți</text>
+
+  <rect x="350" y="715" width="130" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1"/>
+  <text x="415" y="739" text-anchor="middle" font-size="14" font-weight="600" fill="#444441">AuthService</text>
+  <text x="415" y="757" text-anchor="middle" font-size="11" fill="#5F5E5A">login, roluri</text>
+
+  <rect x="500" y="715" width="150" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1"/>
+  <text x="575" y="733" text-anchor="middle" font-size="13" font-weight="600" fill="#444441">Notification</text>
+  <text x="575" y="749" text-anchor="middle" font-size="13" font-weight="600" fill="#444441">Service</text>
+  <text x="575" y="764" text-anchor="middle" font-size="11" fill="#5F5E5A">alerte, loguri</text>
+
+  <!-- ===== ROW 7: MenuManager | User | AuditLog | TuiLogin ===== -->
+  <rect x="100" y="810" width="140" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1"/>
+  <text x="170" y="834" text-anchor="middle" font-size="14" font-weight="600" fill="#444441">MenuManager</text>
+  <text x="170" y="852" text-anchor="middle" font-size="11" fill="#5F5E5A">navigare TUI</text>
+
+  <rect x="270" y="810" width="120" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1"/>
+  <text x="330" y="834" text-anchor="middle" font-size="14" font-weight="600" fill="#444441">User</text>
+  <text x="330" y="852" text-anchor="middle" font-size="11" fill="#5F5E5A">autentificare</text>
+
+  <rect x="420" y="810" width="120" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1"/>
+  <text x="480" y="834" text-anchor="middle" font-size="14" font-weight="600" fill="#444441">AuditLog</text>
+  <text x="480" y="852" text-anchor="middle" font-size="11" fill="#5F5E5A">jurnal acțiuni</text>
+
+  <rect x="564" y="810" width="96" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text x="612" y="834" text-anchor="middle" font-size="13" font-weight="600" fill="#3C3489">TuiLogin /</text>
+  <text x="612" y="850" text-anchor="middle" font-size="13" font-weight="600" fill="#3C3489">Dashboard</text>
+
+  <!-- ===== LEGENDA ===== -->
+  <line x1="44" y1="896" x2="74" y2="896" stroke="#555" stroke-width="1" marker-end="url(#inherit)"/>
+  <text x="80" y="900" font-size="11" fill="#555">moștenire</text>
+  <line x1="200" y1="896" x2="230" y2="896" stroke="#555" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#assoc)"/>
+  <text x="236" y="900" font-size="11" fill="#555">asociere</text>
+</svg>

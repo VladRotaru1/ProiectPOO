@@ -44,7 +44,7 @@ brew install cmake ncurses
 ### 1. Clonare repository
 
 ```bash
-git clone https://github.com/VladRotaru1/ProiectPOO.git
+git clone https://github.com/VladRotaru1/3123a_Gestionare_Spital_Rotaru_Vlad-Marius.git
 cd ProiectPOO
 ```
 
@@ -98,7 +98,7 @@ Din directorul `build/`:
 ## 📁 Structura proiectului
 
 ```
-ProiectPOO/
+3123a_Gestionare_Spital_Rotaru_Vlad-Marius/
 ├── src/                    # Codul sursă (fișiere .cpp și .h)
 │   ├── main.cpp
 │   ├── Persoana.*          # Clasa de bază
